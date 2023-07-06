@@ -18,21 +18,6 @@ weather_files:
   - https://climate.onebuilding.org/WMO_Region_6_Europe/NOR_Norway/HO_Hordaland/NOR_HO_Bergen.AP-Flesland.013110_TMYx.zip
   - https://climate.onebuilding.org/WMO_Region_6_Europe/NOR_Norway/TR_Troms/NOR_TR_Tromso.AP-Langnes.010250_TMYx.zip
 
-  epw_urls1:          # if get_epw is online, program takes epw_urls and creates directories based on that
-  - https://climate.onebuilding.org/WMO_Region_6_Europe/GRC_Greece/AT_Attica/GRC_AT_Athinai-Hellinikon.AFB.167160_TMYx.zip
-  - https://climate.onebuilding.org/WMO_Region_5_Southwest_Pacific/AUS_Australia/ACT_Australian_Capital_Territory/AUS_ACT_Canberra.Intl.AP.949260_TMYx.zip
-  - https://climate.onebuilding.org/WMO_Region_6_Europe/ESP_Spain/MD_Madrid/ESP_MD_Madrid.WS.082200_TMYx.zip
-  - https://climate.onebuilding.org/WMO_Region_6_Europe/ITA_Italy/LM_Lombardy/ITA_LM_Milano-Bergamo.Intl.AP.160760_TMYx.zip
-  - https://climate.onebuilding.org/WMO_Region_2_Asia/RUS_Russian_Federation/MOS_Moscow/RUS_MOS_Moscow-Bibirevo.276120_TMYx.zip
-  - https://climate.onebuilding.org/WMO_Region_2_Asia/RUS_Russian_Federation/SPE_Sankt_Peterburg/RUS_SPE_St.Petersburg-Pulkovo.AP.260630_TMYx.zip
-  - https://climate.onebuilding.org/WMO_Region_4_North_and_Central_America/USA_United_States_of_America/NY_New_York/USA_NY_New.York-LaGuardia.AP.725030_TMYx.zip
-  - https://climate.onebuilding.org/WMO_Region_6_Europe/NOR_Norway/OS_Oslo/NOR_OS_Oslo-Fornebu.AP.014881_TMYx.zip
-  - https://climate.onebuilding.org/WMO_Region_6_Europe/NOR_Norway/TD_Trondelag/NOR_TD_Trondheim-Voll.012570_TMYx.zip
-  - https://climate.onebuilding.org/WMO_Region_6_Europe/ITA_Italy/LZ_Lazio/ITA_LZ_Rome-Fiumicino-da.Vinci.AP.162420_TMYx.zip
-  - https://climate.onebuilding.org/WMO_Region_4_North_and_Central_America/USA_United_States_of_America/UT_Utah/USA_UT_Salt.Lake.City.Intl.AP.725720_TMYx.zip
-  - https://climate.onebuilding.org/WMO_Region_2_Asia/IND_India/DL_Delhi/IND_DL_New.Delhi-Gandhi.Intl.AP.421810_TMYx.zip
-  - https://climate.onebuilding.org/WMO_Region_3_South_America/ARG_Argentina/SJ_San_Juan/ARG_SJ_San.Juan-Sarmiento.Intl.AP.873110_TMYx.zip
-
   offline_weather_dir: 'Offline_weather_files_input'
   
   epw_ddy_names:         

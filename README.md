@@ -3,7 +3,7 @@
 
 ## Introduction
 ![alt text](https://github.com/gaurav306/NatureSD_paper_temporary/blob/master/README_utils/new_wf1.jpg)
-Applying model-based predictive control in buildings requires a control-oriented model capable of learning how various control actions influence building dynamics, such as indoor air temperature and energy use. However, there is currently a shortage of empirical or synthetic datasets with the appropriate features, variability, quality and volume to properly benchmark these control-oriented models. Addressing this need, a flexible, open-source, Python-based tool capable of generating synthetic building operation data using EnergyPlus as the main building energy simulation engine is introduced. The uniqueness of this tool lies in its capability to automate multiple aspects of the simulation process, guided by user inputs drawn from a text-based configuration file. It generates various kinds of unique random signals for control inputs, performs co-simulation to create unique occupancy schedules, and acquires weather data. Additionally, it simplifies the typically tedious and complex task of configuring EnergyPlus files with all user inputs. Unlike other synthetic datasets for building operations, this tool offers a user-friendly generator that selectively creates data based on user inputs, preventing overwhelming data overproduction.
+Applying model-based predictive control in buildings requires a control-oriented model capable of learning how various control actions influence building dynamics, such as indoor air temperature and energy use. However, there is currently a shortage of empirical or synthetic datasets with the appropriate features, variability, quality and volume to properly benchmark these control-oriented models. Addressing this need, a flexible, open-source, Python-based tool, synconn_build, capable of generating synthetic building operation data using EnergyPlus as the main building energy simulation engine is introduced. The uniqueness of synconn_build lies in its capability to automate multiple aspects of the simulation process, guided by user inputs drawn from a text-based configuration file. It generates various kinds of unique random signals for control inputs, performs co-simulation to create unique occupancy schedules, and acquires weather data. Additionally, it simplifies the typically tedious and complex task of configuring EnergyPlus files with all user inputs. Unlike other synthetic datasets for building operations, synconn_build offers a user-friendly generator that selectively creates data based on user inputs, preventing overwhelming data overproduction.
 
 ## High-level workflow
 The codebase for the data generator comprises three main folders: *‘Dataset_output/’*, *‘Offline_weather_file_input/’*, and *‘src/*’. The *‘Dataset_output/’* folder contains the final time series data generated, which is further described in the 'Data availability' section. The ‘src/’ folder is dedicated to all the scripts and auxiliary files required by the data generator. As discussed before this tool enables the user to create customized datasets for a variety of settings. These options are summarized in the ‘Config_input.yaml’ configuration file, in which users can modify various variables according to the instructions provided in the comments. This configuration file is critical to the tool's functionality, as all the scripts depend on its inputs. 
@@ -21,6 +21,19 @@ It is important to note that all the simulations in the folder with varying *%n%
 
 ![Final Time-series dataset file summary](https://github.com/gaurav306/NatureSD_paper_temporary/blob/master/README_utils/data_headers.jpg "Final Time-series dataset file summary")
 
+# Instructions
+## Step 1: Energyplus initialization
 
+Synconn_build uses EnergyPlusv22.1.0 as the main simualtion engine. It can be downloaded from (https://github.com/NREL/EnergyPlus/releases/tag/v22.1.0).
 
+After installation the user is required to fill in correct information in [Config_input.yaml](https://github.com/gaurav306/synconn_build/blob/main/Config_input.yaml) file.
+```yaml
+energyplus_init:
+  ep_dir: E:\EnergyPlusV22-1-0\
+  idd_dir: E:\EnergyPlusV22-1-0\Energy+.idd
+  timestep: 4          #BEST TO USE 4 (15 mins)
+```
+* **ep_dir**: Specify the path to your EnergyPlus directory.
+* **idd_dir**: Specify the path to your EnergyPlus IDD file.
+* **timestep**: Define the time-step size for the simulation. The unit is hours, with options ranging from 1 (for 1 hour) to 6 (for 10 minutes).
 
