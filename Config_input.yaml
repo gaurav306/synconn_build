@@ -102,30 +102,6 @@ signal_generator_details:
   # this determines the minimum number of hours the window will not open once it is closed
   # this will be used in the following signals related to windo opening
 
-  prbs_win_0_1:
-    if_multiple_frequency_signal: 1
-    minmax_splits: [3,16]
-    frequency: 1 low
-    possible_bits: [0,1]
-    stay_steps_possible: [0]
-    tightness_for_frequencies: [24, 48, 72, 96, 120]
-  
-  prbs_win_multiple:
-    if_multiple_frequency_signal: 1
-    minmax_splits: [3,16]
-    frequency: 1 low
-    possible_bits: [0, 0.25, 0.5, 0.75, 1]
-    stay_steps_possible: [0]
-    tightness_for_frequencies: [24, 48, 72, 96, 120]
-  
-  prbs_win_0_1_multistep:
-    if_multiple_frequency_signal: 1
-    minmax_splits: [3,16]
-    frequency: 1 low
-    possible_bits: [0,1]
-    stay_steps_possible: [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
-    tightness_for_frequencies: [24, 48, 72, 96, 120]
-  
   prbs_win_multiple_multistep:
     if_multiple_frequency_signal: 1
     minmax_splits: [3,16]

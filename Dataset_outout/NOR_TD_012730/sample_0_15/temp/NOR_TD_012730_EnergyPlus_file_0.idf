@@ -125,14 +125,20 @@ RunPeriod,
     No;                       !- Treat Weather as Actual
 
 RUNPERIODCONTROL:SPECIALDAYS,
-    H7,                       !- Name
-    25-Jan,                   !- Start Date
+    H3,                       !- Name
+    12-Jan,                   !- Start Date
     1,                        !- Duration
     Holiday;                  !- Special Day Type
 
 RUNPERIODCONTROL:SPECIALDAYS,
-    H10,                      !- Name
-    2-Feb,                    !- Start Date
+    H4,                       !- Name
+    19-Jan,                   !- Start Date
+    1,                        !- Duration
+    Holiday;                  !- Special Day Type
+
+RUNPERIODCONTROL:SPECIALDAYS,
+    H13,                      !- Name
+    14-Feb,                   !- Start Date
     1,                        !- Duration
     Holiday;                  !- Special Day Type
 
@@ -143,32 +149,8 @@ RUNPERIODCONTROL:SPECIALDAYS,
     Holiday;                  !- Special Day Type
 
 RUNPERIODCONTROL:SPECIALDAYS,
-    H15,                      !- Name
-    23-Feb,                   !- Start Date
-    1,                        !- Duration
-    Holiday;                  !- Special Day Type
-
-RUNPERIODCONTROL:SPECIALDAYS,
-    H18,                      !- Name
-    7-Mar,                    !- Start Date
-    1,                        !- Duration
-    Holiday;                  !- Special Day Type
-
-RUNPERIODCONTROL:SPECIALDAYS,
-    H25,                      !- Name
-    31-Mar,                   !- Start Date
-    1,                        !- Duration
-    Holiday;                  !- Special Day Type
-
-RUNPERIODCONTROL:SPECIALDAYS,
-    H28,                      !- Name
-    11-Apr,                   !- Start Date
-    1,                        !- Duration
-    Holiday;                  !- Special Day Type
-
-RUNPERIODCONTROL:SPECIALDAYS,
-    H31,                      !- Name
-    21-Apr,                   !- Start Date
+    H29,                      !- Name
+    12-Apr,                   !- Start Date
     1,                        !- Duration
     Holiday;                  !- Special Day Type
 
@@ -179,56 +161,80 @@ RUNPERIODCONTROL:SPECIALDAYS,
     Holiday;                  !- Special Day Type
 
 RUNPERIODCONTROL:SPECIALDAYS,
-    H35,                      !- Name
-    2-May,                    !- Start Date
-    1,                        !- Duration
-    Holiday;                  !- Special Day Type
-
-RUNPERIODCONTROL:SPECIALDAYS,
-    H38,                      !- Name
-    10-May,                   !- Start Date
-    1,                        !- Duration
-    Holiday;                  !- Special Day Type
-
-RUNPERIODCONTROL:SPECIALDAYS,
     H39,                      !- Name
     17-May,                   !- Start Date
     1,                        !- Duration
     Holiday;                  !- Special Day Type
 
 RUNPERIODCONTROL:SPECIALDAYS,
-    H54,                      !- Name
-    1-Jul,                    !- Start Date
+    H42,                      !- Name
+    25-May,                   !- Start Date
     1,                        !- Duration
     Holiday;                  !- Special Day Type
 
 RUNPERIODCONTROL:SPECIALDAYS,
-    H55,                      !- Name
-    11-Jul,                   !- Start Date
+    H45,                      !- Name
+    3-Jun,                    !- Start Date
     1,                        !- Duration
     Holiday;                  !- Special Day Type
 
 RUNPERIODCONTROL:SPECIALDAYS,
-    H67,                      !- Name
-    16-Aug,                   !- Start Date
+    H46,                      !- Name
+    7-Jun,                    !- Start Date
     1,                        !- Duration
     Holiday;                  !- Special Day Type
 
 RUNPERIODCONTROL:SPECIALDAYS,
-    H68,                      !- Name
-    19-Aug,                   !- Start Date
+    H53,                      !- Name
+    28-Jun,                   !- Start Date
     1,                        !- Duration
     Holiday;                  !- Special Day Type
 
 RUNPERIODCONTROL:SPECIALDAYS,
-    H81,                      !- Name
-    6-Oct,                    !- Start Date
+    H56,                      !- Name
+    13-Jul,                   !- Start Date
     1,                        !- Duration
     Holiday;                  !- Special Day Type
 
 RUNPERIODCONTROL:SPECIALDAYS,
-    H82,                      !- Name
-    7-Oct,                    !- Start Date
+    H57,                      !- Name
+    14-Jul,                   !- Start Date
+    1,                        !- Duration
+    Holiday;                  !- Special Day Type
+
+RUNPERIODCONTROL:SPECIALDAYS,
+    H61,                      !- Name
+    1-Aug,                    !- Start Date
+    1,                        !- Duration
+    Holiday;                  !- Special Day Type
+
+RUNPERIODCONTROL:SPECIALDAYS,
+    H69,                      !- Name
+    22-Aug,                   !- Start Date
+    1,                        !- Duration
+    Holiday;                  !- Special Day Type
+
+RUNPERIODCONTROL:SPECIALDAYS,
+    H71,                      !- Name
+    6-Sep,                    !- Start Date
+    1,                        !- Duration
+    Holiday;                  !- Special Day Type
+
+RUNPERIODCONTROL:SPECIALDAYS,
+    H73,                      !- Name
+    12-Sep,                   !- Start Date
+    1,                        !- Duration
+    Holiday;                  !- Special Day Type
+
+RUNPERIODCONTROL:SPECIALDAYS,
+    H74,                      !- Name
+    14-Sep,                   !- Start Date
+    1,                        !- Duration
+    Holiday;                  !- Special Day Type
+
+RUNPERIODCONTROL:SPECIALDAYS,
+    H79,                      !- Name
+    26-Sep,                   !- Start Date
     1,                        !- Duration
     Holiday;                  !- Special Day Type
 
@@ -245,32 +251,26 @@ RUNPERIODCONTROL:SPECIALDAYS,
     Holiday;                  !- Special Day Type
 
 RUNPERIODCONTROL:SPECIALDAYS,
-    H89,                      !- Name
-    10-Nov,                   !- Start Date
+    H86,                      !- Name
+    2-Nov,                    !- Start Date
     1,                        !- Duration
     Holiday;                  !- Special Day Type
 
 RUNPERIODCONTROL:SPECIALDAYS,
-    H92,                      !- Name
-    2-Dec,                    !- Start Date
+    H87,                      !- Name
+    7-Nov,                    !- Start Date
     1,                        !- Duration
     Holiday;                  !- Special Day Type
 
 RUNPERIODCONTROL:SPECIALDAYS,
-    H94,                      !- Name
-    14-Dec,                   !- Start Date
+    H88,                      !- Name
+    8-Nov,                    !- Start Date
     1,                        !- Duration
     Holiday;                  !- Special Day Type
 
 RUNPERIODCONTROL:SPECIALDAYS,
     H98,                      !- Name
     27-Dec,                   !- Start Date
-    1,                        !- Duration
-    Holiday;                  !- Special Day Type
-
-RUNPERIODCONTROL:SPECIALDAYS,
-    H99,                      !- Name
-    29-Dec,                   !- Start Date
     1,                        !- Duration
     Holiday;                  !- Special Day Type
 
