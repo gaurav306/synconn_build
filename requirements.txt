@@ -1,0 +1,8 @@
+zipp==3.15.0
+eppy==0.5.63
+matplotlib==3.7.1
+numpy==1.24.3
+scipy==1.10.1
+statsmodels==0.14.0
+pandas==2.0.1
+PyYAML==6.0

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<CoSimulationParameters>
+  <SpaceNameMapping>
+    <obXML_SpaceID>S1_Core_ZN</obXML_SpaceID>
+    <FMU_InstanceName>SPACE5-1</FMU_InstanceName>
+  </SpaceNameMapping>
+  <SpaceNameMapping>
+    <obXML_SpaceID>S2_Perimeter_ZN_1</obXML_SpaceID>
+    <FMU_InstanceName>SPACE1-1</FMU_InstanceName>
+  </SpaceNameMapping>
+  <SpaceNameMapping>
+    <obXML_SpaceID>S3_Perimeter_ZN_2</obXML_SpaceID>
+    <FMU_InstanceName>SPACE2-1</FMU_InstanceName>
+  </SpaceNameMapping>
+  <SpaceNameMapping>
+    <obXML_SpaceID>S4_Perimeter_ZN_3</obXML_SpaceID>
+    <FMU_InstanceName>SPACE3-1</FMU_InstanceName>
+  </SpaceNameMapping>
+  <SpaceNameMapping>
+    <obXML_SpaceID>S5_Perimeter_ZN_4</obXML_SpaceID>
+    <FMU_InstanceName>SPACE4-1</FMU_InstanceName>
+  </SpaceNameMapping>
+
+  <SimulationSettings>
+    <IsLeapYear>No</IsLeapYear>
+    <DayofWeekForStartDay>Sunday</DayofWeekForStartDay>
+    <DoMovementCalculation>Yes</DoMovementCalculation>
+    <IsDebugMode>No</IsDebugMode>
+    <StartMonth>1</StartMonth>
+    <StartDay>1</StartDay>
+    <EndMonth>12</EndMonth>
+    <EndDay>31</EndDay>
+    <NumberofTimestepsPerHour>4</NumberofTimestepsPerHour>
+  </SimulationSettings>
+</CoSimulationParameters>

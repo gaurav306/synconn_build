@@ -1,0 +1,163 @@
+energyplus_init:
+  ep_dir: E:\EnergyPlusV22-1-0\
+  idd_dir: E:\EnergyPlusV22-1-0\Energy+.idd
+  timestep: 4          #BEST TO USE 4 (15 mins)
+  # 1 is for 1 hour, 2 is for 30 mins, 3 is for 20 mins, 4 is for 15 mins, 5 is for 12 mins, 6 is for 10 mins
+
+# should be urls from climate.onebuilding.org
+weather_files: 
+  get_epw: online    # online or offline
+  
+  epw_urls:          # if get_epw is online, program takes epw_urls and creates directories based on that
+  - https://climate.onebuilding.org/WMO_Region_6_Europe/NOR_Norway/TD_Trondelag/NOR_TD_Selbu.012730_TMYx.zip
+
+  epw_urls2:          # if get_epw is online, program takes epw_urls and creates directories based on that
+  - https://climate.onebuilding.org/WMO_Region_6_Europe/NOR_Norway/AK_Akershus/NOR_AK_Oslo.AP-Gardermoen.013840_TMYx.zip
+  - https://climate.onebuilding.org/WMO_Region_6_Europe/NOR_Norway/TR_Troms/NOR_TR_Trondheim.AP-Vaernes.012710_TMYx.zip
+  - https://climate.onebuilding.org/WMO_Region_6_Europe/NOR_Norway/TD_Trondelag/NOR_TD_Roros.AP.012880_TMYx.zip
+  - https://climate.onebuilding.org/WMO_Region_6_Europe/NOR_Norway/HO_Hordaland/NOR_HO_Bergen.AP-Flesland.013110_TMYx.zip
+  - https://climate.onebuilding.org/WMO_Region_6_Europe/NOR_Norway/TR_Troms/NOR_TR_Tromso.AP-Langnes.010250_TMYx.zip
+
+  epw_urls1:          # if get_epw is online, program takes epw_urls and creates directories based on that
+  - https://climate.onebuilding.org/WMO_Region_6_Europe/GRC_Greece/AT_Attica/GRC_AT_Athinai-Hellinikon.AFB.167160_TMYx.zip
+  - https://climate.onebuilding.org/WMO_Region_5_Southwest_Pacific/AUS_Australia/ACT_Australian_Capital_Territory/AUS_ACT_Canberra.Intl.AP.949260_TMYx.zip
+  - https://climate.onebuilding.org/WMO_Region_6_Europe/ESP_Spain/MD_Madrid/ESP_MD_Madrid.WS.082200_TMYx.zip
+  - https://climate.onebuilding.org/WMO_Region_6_Europe/ITA_Italy/LM_Lombardy/ITA_LM_Milano-Bergamo.Intl.AP.160760_TMYx.zip
+  - https://climate.onebuilding.org/WMO_Region_2_Asia/RUS_Russian_Federation/MOS_Moscow/RUS_MOS_Moscow-Bibirevo.276120_TMYx.zip
+  - https://climate.onebuilding.org/WMO_Region_2_Asia/RUS_Russian_Federation/SPE_Sankt_Peterburg/RUS_SPE_St.Petersburg-Pulkovo.AP.260630_TMYx.zip
+  - https://climate.onebuilding.org/WMO_Region_4_North_and_Central_America/USA_United_States_of_America/NY_New_York/USA_NY_New.York-LaGuardia.AP.725030_TMYx.zip
+  - https://climate.onebuilding.org/WMO_Region_6_Europe/NOR_Norway/OS_Oslo/NOR_OS_Oslo-Fornebu.AP.014881_TMYx.zip
+  - https://climate.onebuilding.org/WMO_Region_6_Europe/NOR_Norway/TD_Trondelag/NOR_TD_Trondheim-Voll.012570_TMYx.zip
+  - https://climate.onebuilding.org/WMO_Region_6_Europe/ITA_Italy/LZ_Lazio/ITA_LZ_Rome-Fiumicino-da.Vinci.AP.162420_TMYx.zip
+  - https://climate.onebuilding.org/WMO_Region_4_North_and_Central_America/USA_United_States_of_America/UT_Utah/USA_UT_Salt.Lake.City.Intl.AP.725720_TMYx.zip
+  - https://climate.onebuilding.org/WMO_Region_2_Asia/IND_India/DL_Delhi/IND_DL_New.Delhi-Gandhi.Intl.AP.421810_TMYx.zip
+  - https://climate.onebuilding.org/WMO_Region_3_South_America/ARG_Argentina/SJ_San_Juan/ARG_SJ_San.Juan-Sarmiento.Intl.AP.873110_TMYx.zip
+
+  offline_weather_dir: 'Offline_weather_files_input'
+  
+  epw_ddy_names:         
+  # if get_epw is offline, program takes epw_ddy_names from offline_weather_dir and creates directories and run simualtion based on that
+  # KEEP FILES NAMES SAME FOR EPW AND ITS DDY FILE. DIRECTORY NAME WILL BE SAME AS FILE NAME.
+  # Example, Trondheim below would mean Trondheim.epw and Trondheim.ddy files are in offline_weather_dir folder
+  - Trondheim
+  
+ep_simualtion_data_details:
+  ep_template_file: 'src/0_5-ZONE_VRF_BASEBORD_template.idf'         # keep the src/
+  
+  run_ep_or_justmakeidf: 1    # 1 for run ep, 0 for just make idf
+
+  number_of_stochastic_EP_cases_to_generate: 1
+  
+  unique_prefix_for_each_stochastic_case: 'sample'
+  # unique_prefix_for_each_stochastic_case can be any string.
+  #     used to distinguish between different stochastic cases
+  #     based on the values of the following 4 parameters
+  
+  running_mode: full 
+  # if running_mode: debug, then the simulation will be run from 1/10 to 31/12
+  # if running_mode: full, then the simulation will be run for full year
+
+  random_holidays: True
+  # if random_holidays: True, then the holidays will be randomly selected from the list 
+  #     in src/random_holidays_EPobjects_list.csv
+  # if random_holidays: False, then there will be no holidays in the simulation. 
+  #     Weekends will be NOT be considered as holidays
+
+  random_occupancy: True
+  # if random_occupancy: True, then the occupancy will be stochastic made by OB_GENERATOR
+  # if random_occupancy: False, then the occupancy will be fixed: OCCUPY-1
+
+  random_HVAC_mode: True
+  # if random_HVAC_mode: True, then the HVAC mode will be randomly selected from the following list [0,1,2,3]
+  #     which is [Off, Heat, Cool, Dual]
+  # if random_HVAC_mode: False, then the HVAC mode will be set to 3 (Dual) 
+
+  random_window_opening: True
+  # if random_window_opening: True, then the window opening will be taken from the signal generated
+  # if random_window_opening: False, then the window will be fixed to be closed
+
+signal_generator_details:
+  if_plot: 0
+  
+  frequency_categories: ['5 high', '4 high-medium', '3 medium', '2 medium-low', '1 low']
+  # below are different signals that can be generated
+  
+  mprs_setpoints:
+    normal_or_uniform_distribution: normal
+    if_multiple_frequency_signal: 1
+    # this determines if the signal has same kind of frequency throughout the year or not
+    # if if_multiple_frequency_signal: 1 - random number of frequencies throughout the year
+    # if if_multiple_frequency_signal: 0 - same frequency throughout the year
+    minmax_splits: [3,16]
+    # this determines the number of frequency splits in the signal if if_multiple_frequency_signal: 1
+    frequency: 1 low
+    # this determines the type of frequency of the signal if if_multiple_frequency_signal: 0
+    # it is one of the frequency_categories
+    possible_bits: [18, 18.5, 19, 19.5, 20, 20.5, 21, 21.5, 22]
+    # this determines the possible values of the signal
+    stay_steps_possible: [0]
+    # this determines the number of steps the signal can stay at the same value
+    tightness_for_frequencies: [3, 6, 9, 12, 15]
+    # in hours
+    # this determines the tightness of the signal for each frequency, for frequency_categories
+    # the exact formula where this number is used can be found in the code
+  
+  mprs_hvac_mode:
+    if_multiple_frequency_signal: 1
+    minmax_splits: [3,16]
+    frequency: 1 low
+    possible_bits: [0,1,2,3]
+    stay_steps_possible: [0]
+    minimum_one_mode: 12
+    # in hours, this determines the minimum number of hours for current HVAC mode 
+    tightness_for_frequencies: [24, 48, 72, 96, 120]
+  
+  minimum_window_opening_frequency: 6 
+  # in hours
+  # this determines the minimum number of hours the window will not open once it is closed
+  # this will be used in the following signals related to windo opening
+
+  prbs_win_0_1:
+    if_multiple_frequency_signal: 1
+    minmax_splits: [3,16]
+    frequency: 1 low
+    possible_bits: [0,1]
+    stay_steps_possible: [0]
+    tightness_for_frequencies: [24, 48, 72, 96, 120]
+  
+  prbs_win_multiple:
+    if_multiple_frequency_signal: 1
+    minmax_splits: [3,16]
+    frequency: 1 low
+    possible_bits: [0, 0.25, 0.5, 0.75, 1]
+    stay_steps_possible: [0]
+    tightness_for_frequencies: [24, 48, 72, 96, 120]
+  
+  prbs_win_0_1_multistep:
+    if_multiple_frequency_signal: 1
+    minmax_splits: [3,16]
+    frequency: 1 low
+    possible_bits: [0,1]
+    stay_steps_possible: [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+    tightness_for_frequencies: [24, 48, 72, 96, 120]
+  
+  prbs_win_multiple_multistep:
+    if_multiple_frequency_signal: 1
+    minmax_splits: [3,16]
+    frequency: 1 low
+    possible_bits: [0.25, 0.5, 0.75, 1]
+    stay_steps_possible: [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+    tightness_for_frequencies: [24, 48, 72, 96, 120]
+
+  noise_for_setpoints:
+    noise_or_all_zero: 1          # if noise_or_all_zero: 1, then the signal will be noisy, otherwise it will be all zeros
+    mean_of_noise: 0              # mean of the noise, best 0
+    std_dev_of_noise: 0.1         # standard deviation of the noise, best 0.1 - 0.4
+    if_multiple_frequency_signal: 0   # doesn't matter, just to be consistent with the other signals and code
+    frequency: 1 low                  # doesn't matter, just to be consistent with the other signals and code
+    possible_bits: []                 # doesn't matter, just to be consistent with the other signals and code
+    stay_steps_possible: []           # doesn't matter, just to be consistent with the other signals and code
+    tightness_for_frequencies: []     # doesn't matter, just to be consistent with the other signals and code
+
+  
+  

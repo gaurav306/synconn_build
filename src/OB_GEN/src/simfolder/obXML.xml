@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<OccupantBehavior xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="OS001" xsi:noNamespaceSchemaLocation="obXML_v1.3.2.xsd" Version="1.3.2">
+  <Buildings>
+    <Building ID="Building_1">
+      <Description>A office building which contains 5 spaces and 11 occupants.</Description>
+      <Type>Office</Type>
+      <Spaces ID="All_Spaces">
+        <Space ID="S0_Outdoor">
+          <Type>Outdoor</Type>
+        </Space>
+        <Space ID="S1_Core_ZN">
+          <Type>OfficeShared</Type>
+          <OccupantID>S1_Core_ZN_O1</OccupantID>
+          <OccupantID>S1_Core_ZN_O2</OccupantID>
+          <OccupantID>S1_Core_ZN_O3</OccupantID>
+          <OccupantID>S1_Core_ZN_O4</OccupantID>
+          <OccupantID>S1_Core_ZN_O5</OccupantID>
+        </Space>
+        <Space ID="S2_Perimeter_ZN_1">
+          <Type>Other</Type>
+        </Space>
+        <Space ID="S3_Perimeter_ZN_2">
+          <Type>MeetingRoom</Type>
+          <MeetingEvent>
+            <SeasonType>All</SeasonType>
+            <DayofWeek>Weekdays</DayofWeek>
+            <MinNumOccupantsPerMeeting>2</MinNumOccupantsPerMeeting>
+            <MaxNumOccupantsPerMeeting>8</MaxNumOccupantsPerMeeting>
+            <MinNumberOfMeetingsPerDay>2</MinNumberOfMeetingsPerDay>
+            <MaxNumberOfMeetingsPerDay>6</MaxNumberOfMeetingsPerDay>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT30M</MeetingDuration>
+              <Probability>0.12</Probability>
+            </MeetingDurationProbability>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT60M</MeetingDuration>
+              <Probability>0.72</Probability>
+            </MeetingDurationProbability>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT90M</MeetingDuration>
+              <Probability>0.12</Probability>
+            </MeetingDurationProbability>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT120M</MeetingDuration>
+              <Probability>0.04</Probability>
+            </MeetingDurationProbability>
+          </MeetingEvent>
+        </Space>
+        <Space ID="S4_Perimeter_ZN_3">
+          <Type>OfficeShared</Type>
+          <OccupantID>S4_Perimeter_ZN_3_O1</OccupantID>
+          <OccupantID>S4_Perimeter_ZN_3_O2</OccupantID>
+        </Space>
+        <Space ID="S5_Perimeter_ZN_4">
+          <Type>OfficeShared</Type>
+          <OccupantID>S5_Perimeter_ZN_4_O1</OccupantID>
+          <OccupantID>S5_Perimeter_ZN_4_O2</OccupantID>
+          <OccupantID>S5_Perimeter_ZN_4_O3</OccupantID>
+          <OccupantID>S5_Perimeter_ZN_4_O4</OccupantID>
+        </Space>
+      </Spaces>
+    </Building>
+  </Buildings>
+  <Occupants>
+    <Occupant ID="S1_Core_ZN_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Regular_staff_0</MovementBehaviorID>
+    </Occupant>
+    <Occupant ID="S1_Core_ZN_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Regular_staff_0</MovementBehaviorID>
+    </Occupant>
+    <Occupant ID="S1_Core_ZN_O3">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Regular_staff_0</MovementBehaviorID>
+    </Occupant>
+    <Occupant ID="S1_Core_ZN_O4">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Regular_staff_0</MovementBehaviorID>
+    </Occupant>
+    <Occupant ID="S1_Core_ZN_O5">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Regular_staff_0</MovementBehaviorID>
+    </Occupant>
+    <Occupant ID="S4_Perimeter_ZN_3_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Regular_staff_0</MovementBehaviorID>
+    </Occupant>
+    <Occupant ID="S4_Perimeter_ZN_3_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Regular_staff_0</MovementBehaviorID>
+    </Occupant>
+    <Occupant ID="S5_Perimeter_ZN_4_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Administrator</JobType>
+      <MovementBehaviorID>Administrator_0</MovementBehaviorID>
+    </Occupant>
+    <Occupant ID="S5_Perimeter_ZN_4_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Administrator</JobType>
+      <MovementBehaviorID>Administrator_0</MovementBehaviorID>
+    </Occupant>
+    <Occupant ID="S5_Perimeter_ZN_4_O3">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Administrator</JobType>
+      <MovementBehaviorID>Administrator_0</MovementBehaviorID>
+    </Occupant>
+    <Occupant ID="S5_Perimeter_ZN_4_O4">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Administrator</JobType>
+      <MovementBehaviorID>Administrator_0</MovementBehaviorID>
+    </Occupant>
+  </Occupants>
+  <Behaviors>
+    <MovementBehavior ID="Regular_staff_0">
+      <SeasonType>All</SeasonType>
+      <DayofWeek>Weekdays</DayofWeek>
+      <RandomMovementEvent>
+        <SpaceOccupancy>
+          <SpaceCategory>OwnOffice</SpaceCategory>
+          <PercentTimePresence>70.0</PercentTimePresence>
+          <Duration>PT60M</Duration>
+        </SpaceOccupancy>
+        <SpaceOccupancy>
+          <SpaceCategory>OtherOffice</SpaceCategory>
+          <PercentTimePresence>10.0</PercentTimePresence>
+          <Duration>PT20M</Duration>
+        </SpaceOccupancy>
+        <SpaceOccupancy>
+          <SpaceCategory>MeetingRoom</SpaceCategory>
+          <PercentTimePresence>10.0</PercentTimePresence>
+          <Duration>PT60M</Duration>
+        </SpaceOccupancy>
+        <SpaceOccupancy>
+          <SpaceCategory>AuxRoom</SpaceCategory>
+          <PercentTimePresence>5.0</PercentTimePresence>
+          <Duration>PT10M</Duration>
+        </SpaceOccupancy>
+        <SpaceOccupancy>
+          <SpaceCategory>Outdoor</SpaceCategory>
+          <PercentTimePresence>5.0</PercentTimePresence>
+          <Duration>PT20M</Duration>
+        </SpaceOccupancy>
+      </RandomMovementEvent>
+      <StatusTransitionEvent>
+        <EventType>Arrival</EventType>
+        <EventOccurModel>
+          <NormalProbabilityModel>
+            <EarlyOccurTime>08:00:00</EarlyOccurTime>
+            <TypicalOccurTime>08:30:00</TypicalOccurTime>
+          </NormalProbabilityModel>
+        </EventOccurModel>
+      </StatusTransitionEvent>
+      <StatusTransitionEvent>
+        <EventType>Departure</EventType>
+        <EventOccurModel>
+          <NormalProbabilityModel>
+            <EarlyOccurTime>17:00:00</EarlyOccurTime>
+            <TypicalOccurTime>17:30:00</TypicalOccurTime>
+          </NormalProbabilityModel>
+        </EventOccurModel>
+      </StatusTransitionEvent>
+      <StatusTransitionEvent>
+        <EventType>ShortTermLeaving</EventType>
+        <EventOccurModel>
+          <NormalProbabilityModel>
+            <EarlyOccurTime>11:30:00</EarlyOccurTime>
+            <TypicalOccurTime>12:00:00</TypicalOccurTime>
+          </NormalProbabilityModel>
+        </EventOccurModel>
+        <EventDuration>
+          <NormalDurationModel>
+            <TypicalDuration>PT60M</TypicalDuration>
+            <MinimumDuration>PT45M</MinimumDuration>
+          </NormalDurationModel>
+        </EventDuration>
+      </StatusTransitionEvent>
+    </MovementBehavior>
+    <MovementBehavior ID="Administrator_0">
+      <SeasonType>All</SeasonType>
+      <DayofWeek>Weekdays</DayofWeek>
+      <RandomMovementEvent>
+        <SpaceOccupancy>
+          <SpaceCategory>OwnOffice</SpaceCategory>
+          <PercentTimePresence>50.0</PercentTimePresence>
+          <Duration>PT60M</Duration>
+        </SpaceOccupancy>
+        <SpaceOccupancy>
+          <SpaceCategory>OtherOffice</SpaceCategory>
+          <PercentTimePresence>5.0</PercentTimePresence>
+          <Duration>PT20M</Duration>
+        </SpaceOccupancy>
+        <SpaceOccupancy>
+          <SpaceCategory>MeetingRoom</SpaceCategory>
+          <PercentTimePresence>30.0</PercentTimePresence>
+          <Duration>PT60M</Duration>
+        </SpaceOccupancy>
+        <SpaceOccupancy>
+          <SpaceCategory>AuxRoom</SpaceCategory>
+          <PercentTimePresence>5.0</PercentTimePresence>
+          <Duration>PT10M</Duration>
+        </SpaceOccupancy>
+        <SpaceOccupancy>
+          <SpaceCategory>Outdoor</SpaceCategory>
+          <PercentTimePresence>5.0</PercentTimePresence>
+          <Duration>PT20M</Duration>
+        </SpaceOccupancy>
+      </RandomMovementEvent>
+      <StatusTransitionEvent>
+        <EventType>Arrival</EventType>
+        <EventOccurModel>
+          <NormalProbabilityModel>
+            <EarlyOccurTime>08:15:00</EarlyOccurTime>
+            <TypicalOccurTime>08:30:00</TypicalOccurTime>
+          </NormalProbabilityModel>
+        </EventOccurModel>
+      </StatusTransitionEvent>
+      <StatusTransitionEvent>
+        <EventType>Departure</EventType>
+        <EventOccurModel>
+          <NormalProbabilityModel>
+            <EarlyOccurTime>17:15:00</EarlyOccurTime>
+            <TypicalOccurTime>17:30:00</TypicalOccurTime>
+          </NormalProbabilityModel>
+        </EventOccurModel>
+      </StatusTransitionEvent>
+      <StatusTransitionEvent>
+        <EventType>ShortTermLeaving</EventType>
+        <EventOccurModel>
+          <NormalProbabilityModel>
+            <EarlyOccurTime>11:30:00</EarlyOccurTime>
+            <TypicalOccurTime>12:00:00</TypicalOccurTime>
+          </NormalProbabilityModel>
+        </EventOccurModel>
+        <EventDuration>
+          <NormalDurationModel>
+            <TypicalDuration>PT60M</TypicalDuration>
+            <MinimumDuration>PT45M</MinimumDuration>
+          </NormalDurationModel>
+        </EventDuration>
+      </StatusTransitionEvent>
+    </MovementBehavior>
+    <MovementBehavior ID="Manager_0">
+      <SeasonType>All</SeasonType>
+      <DayofWeek>Weekdays</DayofWeek>
+      <RandomMovementEvent>
+        <SpaceOccupancy>
+          <SpaceCategory>OwnOffice</SpaceCategory>
+          <PercentTimePresence>50.0</PercentTimePresence>
+          <Duration>PT60M</Duration>
+        </SpaceOccupancy>
+        <SpaceOccupancy>
+          <SpaceCategory>OtherOffice</SpaceCategory>
+          <PercentTimePresence>5.0</PercentTimePresence>
+          <Duration>PT20M</Duration>
+        </SpaceOccupancy>
+        <SpaceOccupancy>
+          <SpaceCategory>MeetingRoom</SpaceCategory>
+          <PercentTimePresence>35.0</PercentTimePresence>
+          <Duration>PT60M</Duration>
+        </SpaceOccupancy>
+        <SpaceOccupancy>
+          <SpaceCategory>AuxRoom</SpaceCategory>
+          <PercentTimePresence>5.0</PercentTimePresence>
+          <Duration>PT10M</Duration>
+        </SpaceOccupancy>
+        <SpaceOccupancy>
+          <SpaceCategory>Outdoor</SpaceCategory>
+          <PercentTimePresence>5.0</PercentTimePresence>
+          <Duration>PT20M</Duration>
+        </SpaceOccupancy>
+      </RandomMovementEvent>
+      <StatusTransitionEvent>
+        <EventType>Arrival</EventType>
+        <EventOccurModel>
+          <NormalProbabilityModel>
+            <EarlyOccurTime>08:30:00</EarlyOccurTime>
+            <TypicalOccurTime>09:00:00</TypicalOccurTime>
+          </NormalProbabilityModel>
+        </EventOccurModel>
+      </StatusTransitionEvent>
+      <StatusTransitionEvent>
+        <EventType>Departure</EventType>
+        <EventOccurModel>
+          <NormalProbabilityModel>
+            <EarlyOccurTime>16:30:00</EarlyOccurTime>
+            <TypicalOccurTime>17:00:00</TypicalOccurTime>
+          </NormalProbabilityModel>
+        </EventOccurModel>
+      </StatusTransitionEvent>
+      <StatusTransitionEvent>
+        <EventType>ShortTermLeaving</EventType>
+        <EventOccurModel>
+          <NormalProbabilityModel>
+            <EarlyOccurTime>11:30:00</EarlyOccurTime>
+            <TypicalOccurTime>12:00:00</TypicalOccurTime>
+          </NormalProbabilityModel>
+        </EventOccurModel>
+        <EventDuration>
+          <NormalDurationModel>
+            <TypicalDuration>PT60M</TypicalDuration>
+            <MinimumDuration>PT45M</MinimumDuration>
+          </NormalDurationModel>
+        </EventDuration>
+      </StatusTransitionEvent>
+    </MovementBehavior>
+  </Behaviors>
+
+</OccupantBehavior>
