@@ -1,5 +1,5 @@
 
-# *synconn_build* : An open tool for generating *syn*thetic datasets for validating and testing *c*ontrol-*o*riented *n*eural *n*etworks for *build*ing dynamics prediction
+# *synconn_build* : Synthetic dataset generator for testing control-oriented neural networks for building dynamics
 
 *To prevent plagarism, more details will be added here after the paper is published.*
 # Instructions
