@@ -222,4 +222,5 @@ if __name__ == '__main__':
 
 ```
 
-Functions **are_python_requirements_installe()** and **is_EnergyPlus_installed()** are used to check if all python requirements are installed and if EnergyPlusV22-1-0 is installed, respectively. Function **synconn_build()** calls EP_Generator functions to start data generation pipeline. It takes configurations data in form of a dictionary as input. Before **synconn_build** is called, the user can do further changes to configuration dictionary as per needs.
+Functions **are_python_requirements_installed()** and **is_EnergyPlus_installed()** are used to check if all python requirements are installed and if EnergyPlusV22-1-0 is installed, respectively. **are_python_requirements_installed()** takes input [requirements.txt](https://github.com/gaurav306/synconn_build/blob/main/requirements.txt) which lists all packages required by python.
+Function **synconn_build()** calls EP_Generator functions to start data generation pipeline. It takes Config_input.yaml data in form of a dictionary as input. Before **synconn_build** is called, the user can do further changes to configuration dictionary as per needs.
