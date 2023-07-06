@@ -26,7 +26,7 @@ It is important to note that all the simulations in the folder with varying *%n%
 
 *Synconn_build* uses EnergyPlusv22.1.0 as the main simualtion engine. It can be downloaded from (https://github.com/NREL/EnergyPlus/releases/tag/v22.1.0).
 
-After installation the user is required to fill in correct information in [Config_input.yaml](https://github.com/gaurav306/synconn_build/blob/main/Config_input.yaml) file.
+After installation the user is required to fill in correct information in [Config_input.yaml](https://github.com/gaurav306/synconn_build/blob/main/Config_input.yaml#L1) file.
 ```yaml
 energyplus_init:
   ep_dir: E:\EnergyPlusV22-1-0\
@@ -41,7 +41,7 @@ energyplus_init:
 
 The user can run this tool both with or wthout internet connection. If there is internet connection the user can procure weather files from [climate.onebuilding.org](https://climate.onebuilding.org)
 
-Settings for weather files configuration in [Config_input.yaml](https://github.com/gaurav306/synconn_build/blob/main/Config_input.yaml) are as follows:
+Settings for weather files configuration in [Config_input.yaml](https://github.com/gaurav306/synconn_build/blob/main/Config_input.yaml#L8) are as follows:
 
 ```yaml
 weather_files: 
@@ -56,12 +56,12 @@ weather_files:
 ```
 * **get_epw**: Specify whether the weather files should be retrieved online or offline. Your options are 'online' or 'offline'.
 * **epw_urls**: If `get_epw` is set to `online`, list the URLs of your preferred EPW files here. The program will download these files and create corresponding directories based on the URLs. To access a wide variety of weather files, you can visit [climate.onebuilding.org](https://climate.onebuilding.org).
-* **offline_weather_dir**: If get_epw is 'offline', specify the directory that holds your offline weather files.
+* **offline_weather_dir**: If get_epw is `offline`, specify the directory that holds your offline weather files.
 * **epw_ddy_names**: If get_epw is `offline`, provide the names of the EPW and corresponding DDY files here. The program will search for these files in the `offline_weather_dir` and run simulations based on them. Remember that the EPW and DDY files should have identical names, as the directory name will be based on these file names. Ensure the names of the EPW and its corresponding DDY file are identical. For instance, specifying 'Trondheim' implies that 'Trondheim.epw' and 'Trondheim.ddy' files are available in the offline_weather_dir directory.
 
 ## Step 3: Simulation details
 For next step the user is required to make ceratin decisions and provide information.
-Settings for Step 3 in [Config_input.yaml](https://github.com/gaurav306/synconn_build/blob/main/Config_input.yaml) are as follows:
+Settings for Step 3 in [Config_input.yaml](https://github.com/gaurav306/synconn_build/blob/main/Config_input.yaml#L29) are as follows:
 
 ```yaml
 ep_simualtion_data_details:

@@ -84,8 +84,8 @@ signal_generator_details:
     # this determines the number of steps the signal can stay at the same value
     tightness_for_frequencies: [3, 6, 9, 12, 15]
     # in hours
-    # this determines the tightness of the signal for each frequency, for frequency_categories
-    # the exact formula where this number is used can be found in the code
+    # this determines the tightness of the signal for each frequency, 
+    # for frequency_categories the exact formula where this number is used can be found in the code
   
   mprs_hvac_mode:
     if_multiple_frequency_signal: 1
