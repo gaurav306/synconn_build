@@ -1,1 +1,2 @@
-*.bat linguist-vendored=false
+*.bat linguist-vendored
+*.html linguist-vendored
