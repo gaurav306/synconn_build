@@ -53,6 +53,7 @@ if __name__ == '__main__':
     is_EnergyPlus_installed(yaml_configs['energyplus_init']['idd_dir'])
 
     # Run EP_gen_main
+    yaml_configs['ep_simualtion_data_details']['unique_prefix_for_each_stochastic_case'] = 'sample_test'
     synconn_build(yaml_configs)
 
 
