@@ -1,5 +1,5 @@
 
-# synconn_build : An open tool for generating *syn*thetic datasets for validating and testing *c*ontrol-*o*riented *n*eural *n*etworks for *build*ing dynamics prediction
+# *synconn_build* : An open tool for generating *syn*thetic datasets for validating and testing *c*ontrol-*o*riented *n*eural *n*etworks for *build*ing dynamics prediction
 
 ## Introduction
 ![alt text](https://github.com/gaurav306/NatureSD_paper_temporary/blob/master/README_utils/new_wf1.jpg)
