@@ -27,7 +27,7 @@ weather_files:
   - Trondheim
   
 ep_simualtion_data_details:
-  ep_template_file: 'src/0_5-ZONE_VRF_BASEBORD_template.idf'         # keep the src/
+  ep_template_file: 'src/0_5-ZONE_VRF_BASEBORD_template.idf'         # EP template IDF file to be used for simulation
   
   run_ep_or_justmakeidf: 1    # 1 for run ep, 0 for just make idf
 

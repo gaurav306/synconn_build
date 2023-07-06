@@ -31,7 +31,7 @@ After installation the user is required to fill in correct information in [Confi
 energyplus_init:
   ep_dir: E:\EnergyPlusV22-1-0\
   idd_dir: E:\EnergyPlusV22-1-0\Energy+.idd
-  timestep: 4          #BEST TO USE 4 (15 mins)
+  timestep: 4
 ```
 * **ep_dir**: Specify the path to your EnergyPlus directory.
 * **idd_dir**: Specify the path to your EnergyPlus IDD file.
@@ -58,3 +58,15 @@ weather_files:
 * **epw_urls**: If *get_epw* is set to 'online', list the URLs of your preferred EPW files here. The program will download these files and create corresponding directories based on the URLs. To access a wide variety of weather files, you can visit [climate.onebuilding.org](https://climate.onebuilding.org).
 * **offline_weather_dir**: If get_epw is 'offline', specify the directory that holds your offline weather files.
 * **epw_ddy_names**: If get_epw is 'offline', provide the names of the EPW and corresponding DDY files here. The program will search for these files in the *offline_weather_dir* and run simulations based on them. Remember that the EPW and DDY files should have identical names, as the directory name will be based on these file names. Ensure the names of the EPW and its corresponding DDY file are identical. For instance, specifying 'Trondheim' implies that 'Trondheim.epw' and 'Trondheim.ddy' files are available in the offline_weather_dir directory.
+
+
+
+- `ep_template_file`: Specify the EnergyPlus template IDF file to be used for the simulation.
+- `run_ep_or_justmakeidf`: Specify whether to run the EnergyPlus simulations (`1`) or just create the IDF files (`0`).
+- `number_of_stochastic_EP_cases_to_generate`: Define the number of stochastic EnergyPlus cases you want to generate.
+- `unique_prefix_for_each_stochastic_case`: This can be any string and is used to distinguish between different stochastic cases.
+- `running_mode`: Choose the simulation duration. If set to `debug`, the simulation runs from October 1st to December 31st. If set to `full`, the simulation runs for the full year.
+- `random_holidays`: If set to `True`, holidays are randomly selected from the list in `src/random_holidays_EPobjects_list.csv`. If `False`, no holidays are considered in the simulation, and weekends are not considered as holidays.
+- `random_occupancy`: If set to `True`, occupancy is randomly generated using the OB_GENERATOR. If set to `False`, occupancy is fixed to `OCCUPY-1`.
+- `random_HVAC_mode`: If set to `True`, the HVAC mode is randomly selected from the list `[0,1,2,3]`, which corresponds to `[Off, Heat, Cool, Dual]`. If set to `False`, the HVAC mode is set to `3` (Dual).
+- `random_window_opening`: If set to `True`, the window-opening schedule is determined by the signal generated. If set to `False`, the windows are always closed.
