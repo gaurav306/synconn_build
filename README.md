@@ -41,23 +41,20 @@ energyplus_init:
 
 The user can run this tool both with or wthout internet connection. If there is internet connection the user can procure weather files from [climate.onebuilding.org](https://climate.onebuilding.org)
 
-Settings for weather files configuration are as follows:
+Settings for weather files configuration in [Config_input.yaml](https://github.com/gaurav306/synconn_build/blob/main/Config_input.yaml) are as follows:
 
 ```yaml
 weather_files: 
   get_epw: online
-
   epw_urls:
   - https://climate.onebuilding.org/WMO_Region_6_Europe/NOR_Norway/AK_Akershus/NOR_AK_Oslo.AP-Gardermoen.013840_TMYx.zip
   - https://climate.onebuilding.org/WMO_Region_6_Europe/NOR_Norway/TR_Troms/NOR_TR_Trondheim.AP-Vaernes.012710_TMYx.zip
-
   offline_weather_dir: 'Offline_weather_files_input'
-
   epw_ddy_names:         
   - Trondheim
   - Rome
 ```
 * **get_epw**: Specify whether the weather files should be retrieved online or offline. Your options are 'online' or 'offline'.
-* **epw_urls**: If *get_epw* is set to 'online', list the URLs of your preferred EPW files here. The program will download these files and create corresponding directories based on the URLs. To access a wide variety of weather files, you can visit climate.onebuilding.org.
+* **epw_urls**: If *get_epw* is set to 'online', list the URLs of your preferred EPW files here. The program will download these files and create corresponding directories based on the URLs. To access a wide variety of weather files, you can visit [climate.onebuilding.org](https://climate.onebuilding.org).
 * **offline_weather_dir**: If get_epw is 'offline', specify the directory that holds your offline weather files.
 * **epw_ddy_names**: If get_epw is 'offline', provide the names of the EPW and corresponding DDY files here. The program will search for these files in the *offline_weather_dir* and run simulations based on them. Remember that the EPW and DDY files should have identical names, as the directory name will be based on these file names. Ensure the names of the EPW and its corresponding DDY file are identical. For instance, specifying 'Trondheim' implies that 'Trondheim.epw' and 'Trondheim.ddy' files are available in the offline_weather_dir directory.
