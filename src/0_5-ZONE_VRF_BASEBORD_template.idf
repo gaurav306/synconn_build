@@ -352,6 +352,13 @@ ScheduleTypeLimits,
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:COMPACT ===========
 
 Schedule:Compact,
+    CH_diff,                     !- Name
+    Any Number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00, 5;         !- Field 4
+
+Schedule:Compact,
     TWO,                     !- Name
     Any Number,              !- Schedule Type Limits Name
     Through: 12/31,          !- Field 1
@@ -5656,6 +5663,10 @@ EnergyManagementSystem:Sensor,
     Win4_openSched,          !- Output:Variable or Output:Meter Index Key Name
     Schedule Value;          !- Output:Variable or Output:Meter Name
 
+EnergyManagementSystem:Sensor,
+    CH_diff_sensor,        !- Name
+    CH_diff,          !- Output:Variable or Output:Meter Index Key Name
+    Schedule Value;          !- Output:Variable or Output:Meter Name
 
 
 EnergyManagementSystem:Sensor,
@@ -6199,7 +6210,7 @@ EnergyManagementSystem:Program,
     SET H_setback_3 = 16,    !- A11
     SET H_setback_4 = 15.5,  !- A12
     SET H_setback_5 = 15,    !- A13
-    SET C_minus_H = 5,       !- A14
+    SET C_minus_H = CH_diff_sensor,       !- A14
     IF (Holiday == 0) && (DayOfWeek > 1) && (DayOfWeek < 7) && (Hour >=  5) && (Hour <=  22),  !- A15
     SET Oflag = 1,           !- A16
     SET Oflag_not = 0,       !- A17

@@ -138,6 +138,7 @@ def run_stochastic_EP(sim_number, main_dir, epw_name, city_name, configs):
     idf_data =  EP_Generator_utils.change_timestep(True, idf_data, timestep_config)
     idf_data = EP_Generator_utils.change_FileSchedule_names(True, idf_data, ob_file_name, 'Signals_inputs_%s.csv' % sim_number)
     idf_data = EP_Generator_utils.add_ddy_objects(True ,True ,idf_data, ddy_data)
+    idf_data = EP_Generator_utils.c_h_difference(True, idf_data, configs['signal_generator_details']['C_H_difference'])
     
     if configs['ep_simualtion_data_details']['random_holidays']:
         idf_data = EP_Generator_utils.add_holidays(True, idf_data)

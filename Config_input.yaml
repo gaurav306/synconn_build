@@ -87,6 +87,8 @@ signal_generator_details:
     # this determines the tightness of the signal for each frequency, 
     # for frequency_categories the exact formula where this number is used can be found in the code
   
+  C_H_difference: 5 
+
   mprs_hvac_mode:
     if_multiple_frequency_signal: 1
     minmax_splits: [3,16]

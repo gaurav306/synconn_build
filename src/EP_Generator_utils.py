@@ -140,6 +140,17 @@ def stochastic_occupancy(command,idf1): #either stochastic occupancy or not
             idf1.idfobjects['People'][i].Number_of_People_Schedule_Name = 'OCCUPY-1'
     return idf1
 
+def c_h_difference(command,idf1, value): #either stochastic occupancy or not            
+    print()
+    print('C_H_difference:',command)
+    if command:
+        for i in range(len(idf1.idfobjects['Schedule:Compact'])):
+            if idf1.idfobjects['Schedule:Compact'][i].Name == 'CH_diff':
+                idf1.idfobjects['Schedule:Compact'][i].Field_4 = value
+                print('CH_diff changed to %s' % value)
+    return idf1
+
+
 def random_setpoints_mode(command,idf1): #either stochastic occupancy or not            
     print()
     print('random_HVAC_mode function:',command)
