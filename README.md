@@ -81,7 +81,9 @@ signal_generator_details:
     possible_bits: [18, 18.5, 19, 19.5, 20, 20.5, 21, 21.5, 22]
     stay_steps_possible: [0]
     tightness_for_frequencies: [3, 6, 9, 12, 15]
-  
+
+  C_H_difference: 5
+
   mprs_hvac_mode:
     if_multiple_frequency_signal: 1
     minmax_splits: [3,16]
@@ -126,6 +128,8 @@ here **mprs_setpoints**, **mprs_hvac_mode**, **prbs_win_multiple_multistep**, **
 * **mprs_hvac_mode**
     * **if_multiple_frequency_signal**, **minmax_splits**, **frequency**, **possible_bits**, **stay_steps_possible** and **tightness_for_frequencies** are used similarly to **mprs_setpoints**.
     * **minimum_one_mode** Define the minimum number of hours for the current HVAC mode.
+
+* **C_H_difference** Define the difference between cooling and heating setpoints.
 
 * **minimum_window_opening_frequency** Define the minimum number of hours the window will remain closed once it is shut.
 
