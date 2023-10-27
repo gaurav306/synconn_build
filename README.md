@@ -1,7 +1,12 @@
 
 # *synconn_build* : Synthetic dataset generator for testing control-oriented neural networks for building dynamics
 
-*To prevent plagarism, more details will be added here after the paper is published.*
+Applying model-based predictive control in buildings requires a control-oriented model capable of learning how various control actions influence building dynamics, such as indoor air temperature and energy use. However, there is currently a shortage of empirical or synthetic datasets with the appropriate features, variability, quality and volume to properly benchmark these control-oriented models. Addressing this need, a flexible, open-source, Python-based tool, *synconn_build*, capable of generating synthetic building operation data using EnergyPlus as the main building energy simulation engine is introduced. The uniqueness of *synconn_build* lies in its capability to automate multiple aspects of the simulation process, guided by user inputs drawn from a text-based configuration file. It generates various kinds of unique random signals for control inputs, performs co-simulation to create unique occupancy schedules, and acquires weather data. Additionally, it simplifies the typically tedious and complex task of configuring EnergyPlus files with all user inputs. Unlike other synthetic datasets for building operations, *synconn_build* offers a user-friendly generator that selectively creates data based on user inputs, preventing overwhelming data overproduction. Instead of emulating the operational schedules of real buildings, *synconn_build* generates test signals with more frequent variation to cover a broader range of operating conditions.
+
+Link to the paper with more details: [https://doi.org/10.1016/j.mex.2023.102464](https://doi.org/10.1016/j.mex.2023.102464)
+
+![workflow](./Paper/highlevel_workflow.jpg "workflow")
+
 # Instructions
 ## Step 1: EnergyPlus initialization
 
